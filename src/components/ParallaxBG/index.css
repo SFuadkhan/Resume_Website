@@ -1,0 +1,10 @@
+#parallax_bg_div{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 130vh;
+    background-size: cover;
+    transition: background-position 0.1s ease;
+    padding: 10vh 100px;
+}
