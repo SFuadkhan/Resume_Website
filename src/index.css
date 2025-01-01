@@ -2,9 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-ul,ol{
-  list-style-type: none;
+  scrollbar-width: none;
 }
 a{
   text-decoration: none;
@@ -18,9 +16,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', Helvetica, sans-serif;
   font-weight: 600;
 }
-p,i{
+li,p,i{
   color: #aaa;
 }
+
 i{
   font-size: 20px;
 }

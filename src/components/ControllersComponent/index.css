@@ -7,6 +7,10 @@
     flex-direction: column;
     justify-content: space-between;
     height: calc(100vh - 200px);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.link.active i{
+    color: aqua !important;
 }
 #controllers_container menu{
     display: flex;
@@ -14,7 +18,17 @@
     align-items: center;
     gap: 10px;
     background-color: #444;
-    border-radius: 35px;
+    border-radius: 5px;
     width: 70px;
     padding: 10px 0;
+}
+#controllers_icons .link i{
+    transition: color 500ms;
+}
+#controllers_icons .link:hover i{
+    color: aliceblue ;
+    transform: scale(1.1);
+}
+#controllers_icons .link:not(:hover) i{
+    color: #111 ;
 }

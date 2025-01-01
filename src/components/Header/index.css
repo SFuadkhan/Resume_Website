@@ -1,4 +1,5 @@
 header{
+    min-width: 340px;
     padding: 70px 30px 45px;
     display: flex;
     flex-direction: column;
@@ -7,9 +8,15 @@ header{
     background-color: gray;
     border-radius: 30px;
     margin: auto 0;
-    /* margin-left: 10px; */
 }
 header menu{
     display: flex;
     gap: 5px;
+}
+header menu i{
+    transition: all 500ms;
+}
+header menu i:hover{
+    color: aliceblue ;
+    transform: scale(1.1);
 }

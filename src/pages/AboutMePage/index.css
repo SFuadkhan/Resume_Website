@@ -1,0 +1,28 @@
+#about_me_container{
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#about_me_container h1{
+    margin-bottom: 10px;
+}
+#about_me_container article{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+    border-radius: 10px;
+}
+#about_me_container article::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+    width: 1px; 
+    height: 30px; 
+    background-color: black; 
+  }

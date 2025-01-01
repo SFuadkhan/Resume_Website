@@ -1,45 +1,34 @@
 import React, { useState, useEffect } from "react";
-import "./index.css"
-const BackgroundImageDynamic = ({children}) => {
-  const [bgPosition, setBgPosition] = useState({ x: "50%", y: "50%" });
+import "./index.css";
+
+const BackgroundImageDynamic = ({ children }) => {
+  const [bgPosition, setBgPosition] = useState("50% 50%");
 
   useEffect(() => {
     const handleMouseMove = (evt) => {
-      const x = (evt.clientX / window.innerWidth) * 100;
-      const y = (evt.clientY / window.innerHeight) * 100;
+      const x = (evt.clientX / window.innerWidth) * 100; 
+      const y = (evt.clientY / window.innerHeight) * 100; 
 
-      setBgPosition((prev) => ({
-        ...prev,
-        x: `${x}%`,
-        y: prev.y, // Keep the scroll effect intact
-      }));
-    };
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY / document.documentElement.scrollHeight;
-      setBgPosition((prev) => ({
-        ...prev,
-        y: `${scrollY * 100}%`,
-      }));
+      setBgPosition(`${x}% ${y}%`); 
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("scroll", handleScroll);
 
-    // Cleanup event listeners on component unmount
+    
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div id="parallax_bg_div"
+    <div
+      id="parallax_bg_div"
       style={{
-        // height: "130vh", // Make the page scrollable
-        backgroundImage: "url('s-l1200.png')",// Replace with your image URL
+        height: "100vh", 
+        backgroundImage: "url('s-l1200.png')", 
         backgroundSize: "cover",
-        backgroundPosition: `${bgPosition.x} ${bgPosition.y}`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: bgPosition, 
         transition: "background-position 0.1s ease",
       }}
     >

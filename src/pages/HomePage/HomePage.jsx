@@ -1,17 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import Container from '../../components/Container/Container'
-
+import "./index.css"
 function HomePage() {
-    
   return (
     <>
     <Helmet>
         <title>Home Page</title>
     </Helmet>
-      <Container>
-      <div>HomePage</div>
-      </Container>
+            <div id="home_page_container">
+                <h2>Safarov Fuadkhan</h2>
+                <p>Frontend Developer</p>
+            </div>
     </>
   )
 }
